@@ -11,7 +11,7 @@ export default function useTictactoe() {
 		newBoard[index] = player;
 		setBoard(newBoard);
 		if (checkWin(newBoard, player)) return setMessage(player + " Wins");
-		if (checkTie(newBoard)) return setMessage("Tie Game");
+		if (checkTie(newBoard)) return setMessage("Draw");
 		setPlayer(player === "X" ? "O" : "X");
 	}
 
