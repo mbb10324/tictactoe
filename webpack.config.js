@@ -1,6 +1,7 @@
 const LogAfterCompilationPlugin = require("./logger.config.js");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
@@ -36,6 +37,11 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: "public/favicon.ico", to: "favicon.ico" }, // copies favicon
+			],
+		}),
 		// Use css
 		new MiniCssExtractPlugin(),
 		// Use custom log

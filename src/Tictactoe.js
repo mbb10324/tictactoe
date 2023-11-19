@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export default function useTictactoe() {
 	const [board, setBoard] = useState(Array(9).fill(""));
-	const [player, setPlayer] = useState("X");
 	const [message, setMessage] = useState(null);
+	const [player, setPlayer] = useState("X");
 
 	function handleClick(index) {
 		const newBoard = [...board];
