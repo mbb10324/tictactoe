@@ -2,8 +2,10 @@
 	"name": "tictactoe",
 	"version": "0.0.1",
 	"main": "index.js",
+	"homepage": "https://mbb10324.github.io/tictactoe",
 	"scripts": {
 		"start": "webpack serve --open --mode development",
+		"deploy": "gh-pages -d dist",
 		"build": "webpack --mode production"
 	},
 	"devDependencies": {
@@ -20,6 +22,7 @@
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-webpack-plugin": "^4.0.1",
 		"file-loader": "^6.2.0",
+		"gh-pages": "^6.1.0",
 		"html-webpack-plugin": "^5.5.3",
 		"identity-obj-proxy": "^3.0.0",
 		"mini-css-extract-plugin": "^2.7.6",

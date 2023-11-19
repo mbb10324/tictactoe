@@ -44,7 +44,7 @@ export default function useTictactoe() {
 
 	function checkTie(board) {
 		for (var i = 1; i <= Object.keys(board).length; i++) {
-			if (board[i] === "") {
+			if (board[i] === "" && !message) {
 				return false;
 			}
 		}
